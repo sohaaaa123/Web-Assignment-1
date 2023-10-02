@@ -1,0 +1,149 @@
+<!-- Name: Soha Saeed -->
+<!-- student ID: 100815346 -->
+<!--Assignment 1 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"> <!--  tag is an HTML meta tag that specifies the character encoding for a web page.-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--the tag with http-equiv=”X-UA-Compatible” content=”IE=edge” ensures that IE uses the latest available rendering engine to render a web page-->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- the width=device-width part sets the width of the page to follow the screen-width of the device -->
+   <title>Assignment 1</title>
+   <link href="style.css" rel="stylesheet" type="text/css"> <!-- link to css file -->
+  </head>
+
+  <body>
+    <header> <!-- semantic tag to divide the sections-->
+        <div id="header"> 
+          <div class="container"> <!-- div class for links and logi picture in the header -->
+            <nav> <!-- > HTML element represents a section of a page whose purpose is to provide navigation links-->
+              <div class="image"> <!-- logo image for the portfolio profile picture -->
+                <img src="logo.JPG" alt="logo">
+              </div>
+              <ul> <!-- unordered list for the links-->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+              
+              </ul>
+            </nav>
+            <div class="header-text"> <!-- content on the home page -->
+              <p>IT Networking and Security</p>
+              <h1>Hi! i'm a <span>Soha</span><br>i am a student at Ontario Tech University</h1> <!-- The <span> tag is an inline container used to mark up a part of a text, or a part of a document.-->
+            </div>
+          </div>
+        </div>
+    </header>
+      <!-- About page -->
+        <div id="about">
+          <div class="container"> <!-- container for the about me page -->
+            <div class="row">
+                <div class="col-1"> <!--this is to divide the page in two sections one for the picture -->
+                  <img src="aboutMe-img.JPG" alt="img" class="mypicture"> <!-- picture on about me page-->
+                </div>
+                <div class="col-2"> <!-- second column on the about me page for introduction and video-->
+                  <h1 class="sub-title">About Me</h1>
+                  <p class="par">Hi, my name is Soha Saeed. I am a second year student of IT Networking and security at Ontario Tech university.
+                    This is my first Web and script programming Assignment.I love studying about information technology.
+                    Here is an intro video about information Technology.
+                  </p>
+                     <div class="video-container">
+                      <video id="myVideo" controls autoplay muted preload> <!--controls of the video to mute the video as it play -->
+                          <source src="Information-Technology.mp4" type="video/mp4"><!-- link for video mp4-->
+                          <source src="Information-Technology.ogg" type="video/ogg"><!-- link for videpo ogg-->
+                      </video>
+                      <br> <!-- to break the line -->
+                      <button id="playPauseButton">Play</button> <!--button for video to play and pause -->
+                  </div>
+                <!--java script code for video play and pause options-->
+                  <script> 
+              const video = document.getElementById('myVideo'); //to get the vdeo as input 
+              const playPauseButton = document.getElementById('playPauseButton'); //returns an Element object representing the element whose id property matches
+              
+              playPauseButton.addEventListener('click', togglePlayPause);//pause event is sent when a request to pause an activity is handled and the activity has entered its paused state
+              
+              function togglePlayPause() //function to play the video 
+               {
+                  if (video.paused || video.ended) {
+                      video.play();
+                      playPauseButton.textContent = 'Pause';
+                  } else {
+                      video.pause();
+                      playPauseButton.textContent = 'Play';
+                  }
+              }
+              // Update button text when video playback state changes
+                video.addEventListener('play', function ()
+                 {
+               playPauseButton.textContent = 'Pause'; //this will pause the vidoe 
+
+               });
+
+                video.addEventListener('pause', function () { // to listen to the vide audio
+               playPauseButton.textContent = 'Play';
+                });
+
+               </script> 
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <!-- Projects -->
+        <div id="projects">
+          <div class="container"> <!-- container for the project page-->
+            <h1 class="sub-title">Projects</h1>
+            <div class="work-list"> <!--list for the projects-->
+              <div class="work">     
+               <img src="zeus-botnet.png" alt="image"> <!-- first image for th3e project -->
+               <div class="layer">
+                <h3 class="hcolor">Zeus Botnet</h3> <!--heading for the first project-->
+                 <p class="hcolor">The Zeus Infection (or Zeus Trojan malware) is a type of malignan programming that objectives Microsoft Windows and is much of the time used to take monetary information.</p>
+               </div>
+              </div>
+              <div class="work">
+                <img src="Baotou-toxic-lake.jpg" alt="image"> <!-- second picture for the project-->
+                <div class="layer">
+                <h3 class="colorr">Baotou Toxic lake</h3> <!-- secondf project heading-->
+                 <p>It is an artificial lake to discharge the radioactive material coming from factories, that companies make phones and other devices parts and dispose this toxic materials to this lake.</p>
+                 <p></p>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+          <!-- Contact Me -->
+          <div id="contact">
+            <div class="container">
+            <div class="row"> <!-- this is to divide the page in two sections first for information about contact email -->
+              <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>soha.saeed@ontariotechu.net</p>
+                <p>+1 2899430873</p>
+              </div>
+              </div>
+              <br>
+              <div class="contact-right"> <!-- this is second section for the form -->
+                <form>
+                  <input type="text" name="Name" placeholder="your Name" required>
+                  <input type="email" name="email" placeholder="your email" required>
+                  <textarea name="message"  rows="10"  placeholder="your message"></textarea> 
+                  <button>submit</button>        
+                   </form>
+                  </div>
+            </div>
+            </div>
+          
+          <br>
+          <!-- copy right -->
+          <footer>
+            <div id="copyright"> <!-- copyright at the end of the page-->
+          <p>My name is Soha Saeed</p>
+          <p> © Soha Saeed with ❤</p>
+            </div>
+          </footer>
+
+  </body>
+</html>
